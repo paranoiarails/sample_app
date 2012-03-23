@@ -5,22 +5,29 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'sqlite3'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+gem 'test-unit'
 
 #gem "heroku"
 #gem 'sqlite3-ruby', '1.2.5', :group => :development
 # for deployment on Heroku
 gem "heroku"
 group :development do
-  gem 'rspec-rails', '2.0.1'
+  gem 'rspec-rails', '2.6.1.beta1'
 
 end
 
 group :test do
-gem 'rspec', '2.0.1'
+gem 'rspec', '2.6'
 gem 'webrat', '0.7.1'
 end
 
+  group :autotest do 
+    gem 'ZenTest'
+    gem 'autotest'
+    gem 'autotest-rails'
+  end
 
 group :production do
   gem 'pg'
