@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def /
+	@title = "Home"
+  end
   def home
 	@title = "Home"
   end
